@@ -1,0 +1,2 @@
+url: "http://searchahs.duckdns.org" # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: "/index.html" # the subpath of your site, e.g. /blo
