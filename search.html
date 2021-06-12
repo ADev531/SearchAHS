@@ -1,0 +1,24 @@
+<html>
+  #<div id="siq_search_results"></div>
+
+  <head>
+    <title>SearchAHS - 검색 내용</title>
+    <script type="text/javascript">
+    (function () {
+        window.siqConfig = {
+            engineKey: "060c8ce760255b6f4cd7fe43b1a6d87a"
+        };
+        window.siqConfig.baseUrl = "//pub.searchiq.co/";
+        var script = document.createElement("SCRIPT");
+        script.src = window.siqConfig.baseUrl + '/js/container/siq-container-2.js?cb=' + (Math.floor(Math.random()*999999)) + '&engineKey=' + siqConfig.engineKey;
+        script.id = "siq-container";
+        document.getElementsByTagName("HEAD")[0].appendChild(script);
+    })();
+    </script>
+  </head>
+  <body>
+    <h1>SearchAHS</h1>
+    <div id="siq_search_results"></div>
+  </body>
+</html
+   
