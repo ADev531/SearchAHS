@@ -2,6 +2,8 @@
   <head>
      <title>SearchAHS</title>
      <meta name="google-site-verification" content="r9Fz25jd3RiYHzsgS8XWhMtGsft14w3UuuDMh9Fh8Rs" />
+     <script src="https://apis.google.com/js/platform.js" async defer></script>
+     <meta name="google-signin-client_id" content="684568554947-raraiehadea44a21mrg7dac3nf3ndl46.apps.googleusercontent.com">
      <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
      <script data-ad-client="ca-pub-4638007674394516" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -11,5 +13,21 @@
 <script async src="https://cse.google.com/cse.js?cx=a434a22d5054e5c51"></script>
 <div class="gcse-searchbox-only"></div>
 <a class="sh901soft_btn" href="https://battlegom.wixsite.com/sh901-soft" style="border-left-width: 100px;margin-left: 100px;margin-top: 100px;">SH901 Soft 공식 사이트</a>
+  <script>
+    function onSignIn(googleUser) {
+    // Useful data for your client-side scripts:
+    var profile = googleUser.getBasicProfile();
+     console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+     console.log('Full Name: ' + profile.getName());
+     console.log('Given Name: ' + profile.getGivenName());
+     console.log('Family Name: ' + profile.getFamilyName());
+     console.log("Image URL: " + profile.getImageUrl());
+     console.log("Email: " + profile.getEmail());
+     // The ID token you need to pass to your backend:
+     var id_token = googleUser.getAuthResponse().id_token;
+     console.log("ID Token: " + id_token);
+        };
+    </script>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">dfd</div>
  </body>
 </html>
