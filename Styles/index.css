@@ -4,6 +4,6 @@
 }
 
 .search{
-  text-align: center;
-  padding: 70px 0;
+  display: block;
+  margin:auto;
 }
