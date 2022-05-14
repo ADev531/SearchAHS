@@ -1,3 +1,5 @@
+import * from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+
 const loginbutton = document.getElementbyID("loginbutton");
 
 const emailinput = document.getElementbyID("email");
