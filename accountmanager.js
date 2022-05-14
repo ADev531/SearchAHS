@@ -43,12 +43,6 @@ signInWithEmailAndPassword(auth, email, password)
     const errorMessage = error.message;
   });
 
-signOut(auth).then(() => {
-  // Sign-out successful.
-}).catch((error) => {
-  // An error happened.
-});
-
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in, see docs for a list of available properties
