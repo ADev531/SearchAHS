@@ -1,3 +1,8 @@
+const loginbutton = document.getElementbyID("loginbutton");
+
+const emailinput = document.getElementbyID("email");
+const passwordinput = document.getElementbyID("password");
+
 const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
@@ -26,4 +31,8 @@ signOut(auth).then(() => {
   // Sign-out successful.
 }).catch((error) => {
   // An error happened.
+});
+
+loginbutton.addEventListener('click', function(){
+    signInWithEmailAndPassword(auth, emailinput.value, passwordinput.value)
 });
