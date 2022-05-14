@@ -8,9 +8,8 @@ const passwordinput = document.getElementbyID("password");
 const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed in
     const user = userCredential.user;
-    // ...
+    alert("login complete")
   })
   .catch((error) => {
     const errorCode = error.code;
