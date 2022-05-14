@@ -1,9 +1,9 @@
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
 
-const loginbutton = document.getElementByID("loginbutton");
+const loginbutton = document.getElementById("loginbutton");
 
-const emailinput = document.getElementByID("email");
-const passwordinput = document.getElementByID("password");
+const emailinput = document.getElementById("email");
+const passwordinput = document.getElementById("password");
 
 const auth = getAuth();
 createUserWithEmailAndPassword(auth, email, password)
