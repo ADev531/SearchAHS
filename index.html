@@ -18,7 +18,7 @@
        function loginWithKakao() {
          window.Kakao.Auth.Login({
            scope: 'profile_nickname, profile_image'
-           success : function(authObj) {
+           success: function(authObj) {
             window.Kakao.API.request({
               url: '/v2/user/me'
               success: res => {
