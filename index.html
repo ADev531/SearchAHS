@@ -16,7 +16,7 @@
        window.Kakao.init("48ed4612b3635bdc49d565558cf0e628");
        
        function loginWithKakao() {
-         window.Kakao.Auth.Login({
+         window.Kakao.Auth.login({
            scope: 'profile_nickname, profile_image',
            success: function(authObj) {
             window.Kakao.API.request({
