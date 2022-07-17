@@ -20,7 +20,7 @@
            scope: 'profile_nickname, profile_image',
            success: function(authObj) {
             window.Kakao.API.request({
-              url: '/v2/user/me'
+              url: '/v2/user/me',
               success: res => {
                 const kakao_account = res.kakao_account
                 console.log(kakao_account);
