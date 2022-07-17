@@ -17,7 +17,7 @@
        
        function loginWithKakao() {
          window.Kakao.Auth.Login({
-           scope: 'profile_nickname, profile_image'
+           scope: 'profile_nickname, profile_image',
            success: function(authObj) {
             window.Kakao.API.request({
               url: '/v2/user/me'
@@ -30,7 +30,7 @@
          });
        }
      </script>
-     <a id="custom-login-btn" href="javascript:loginWithKakao()">
+     <a id="custom-login-btn" href="javascript:loginWithKakao();">
         <img
           src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
           width="222"
