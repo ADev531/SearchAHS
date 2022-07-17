@@ -18,6 +18,7 @@
           id="accounticon">
         </img>
         <p id="accountnickname">로그인하세요</p>
+        <p id="accountemail"></p>
         <a id="kakao-login" href="javascript:loginWithKakao();">
         <img
           src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
@@ -31,7 +32,7 @@
        
        function loginWithKakao() {
          window.Kakao.Auth.login({
-           scope: 'profile_nickname, profile_image',
+           scope: 'profile_nickname, profile_image, account_email',
            success: function(authObj) {
             window.Kakao.API.request({
               url: '/v2/user/me',
@@ -39,6 +40,7 @@
                 const kakao_account = res.kakao_account
                 document.getElementById('accountnickname').textContent = kakao_account.profile.nickname;
                 document.getElementById('accounticon').src = kakao_account.profile.profile_image_url;
+                document.getElementById('accountemail').textContent = kakao_account.profile.email;
                 document.getElementById('kakao-login').style.display = 'none';
               }
             });
