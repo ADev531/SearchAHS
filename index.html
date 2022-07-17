@@ -38,6 +38,7 @@
               url: '/v2/user/me',
               success: res => {
                 const kakao_account = res.kakao_account
+                console.log(kakao_account.profile);
                 document.getElementById('accountnickname').textContent = kakao_account.profile.nickname;
                 document.getElementById('accounticon').src = kakao_account.profile.profile_image_url;
                 document.getElementById('accountemail').textContent = kakao_account.profile.email;
