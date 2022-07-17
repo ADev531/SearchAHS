@@ -12,7 +12,20 @@
  </head>
   <body>
      <h1 class="logo">SearchAHS</h1>
-     <div class="accountbar"><img src='' id="accounticon"></img><p id="accountnickname">로그인하세요</p><div>
+     <div class="accountbar">
+        <img 
+          src='' 
+          id="accounticon">
+        </img>
+        <p id="accountnickname">로그인하세요</p>
+        <a class="kakao-login" href="javascript:loginWithKakao();">
+        <img
+          src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
+          width="222"
+          alt="카카오 로그인 버튼"
+          style="height:60px;width:auto;"
+        />
+     </a></div>
      <script>
        window.Kakao.init("48ed4612b3635bdc49d565558cf0e628");
        
@@ -26,19 +39,12 @@
                 const kakao_account = res.kakao_account
                 document.getElementById('accountnickname').textContent = kakao_account.profile.nickname;
                 document.getElementById('accounticon').src = kakao_account.profile.profile_image_url;
+                document.getElementById('kakao-login').style.display = 'none';
               }
             });
            }
          });
        }
-     </script>
-     <a class="kakao-login" href="javascript:loginWithKakao();">
-        <img
-          src="//k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg"
-          width="222"
-          alt="카카오 로그인 버튼"
-          style="height:60px;width:auto;"
-        />
-     </a>
+    </script>
  </body>
 </html>
