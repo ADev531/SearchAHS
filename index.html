@@ -12,6 +12,7 @@
  </head>
   <body>
      <h1 class="logo">SearchAHS</h1>
+     <div id="accountbar"><img src='' id="accounticon"></img><p id="accountnickname">로그인하세요</p><div>
      <script>
        window.Kakao.init("48ed4612b3635bdc49d565558cf0e628");
        
@@ -23,7 +24,8 @@
               url: '/v2/user/me',
               success: res => {
                 const kakao_account = res.kakao_account
-                console.log(kakao_account);
+                document.getElementById('accountnickname').textContent = kakao_account.profile.nickname;
+                document.getElementById('accounticon').src = kakao_account.profile.profile_image_url;
               }
             });
            }
